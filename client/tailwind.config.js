@@ -13,6 +13,7 @@ export default {
       headerbg: "#ffffff", //#ffffff
       lightorange: "#f6f6f6",
       infoFooterCol: "#14212b",
+      greyWhite: "#fffff"
       
     },
   },

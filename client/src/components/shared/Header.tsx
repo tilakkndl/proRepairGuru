@@ -28,7 +28,7 @@ const Header = () => {
   },[])
   return (
 <>
-<header className={`bg-primary text-white p-4 flex justify-between items-center bg-red h-20 w-full bg-headerbg overflow-hidden ${isScrolled? "fixed top-0": "relative"}`}>
+<header className={`bg-primary text-white p-4 flex justify-between items-center bg-red h-20 w-full bg-headerbg overflow-hidden opacity-100 ${isScrolled? "fixed top-0": "relative"}`}>
 
 <div className=' flex justify-center items-center  w-32 overflow-hidden'>
     <Link to='/' className='text-2xl font-bold '>
