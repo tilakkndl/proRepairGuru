@@ -3,41 +3,41 @@ import { Link } from 'react-router-dom'
 const homeRepair = [
     {
         name: "Plumbing",
-        image: "./src/assets/services/plumbing.jpg"
+        image: "./services/plumbing.jpg"
     },
     {
         name: "Electrician",
-        image: "./src/assets/services/electrician.jpg"
+        image: "./services/electrician.jpg"
     },
     {
         name: "Interior Exterior Decortion",
-        image: "./src/assets/services/interior_exterior_design.jpg"
+        image: "./services/interior_exterior_design.jpg"
     },{
         name: "Kitchen Decortion",
-        image: "./src/assets/services/kitchen_decor.jpg"
+        image: "./services/kitchen_decor.jpg"
     },{
         name: "Water Purification",
-        image: "./src/assets/services/tank.jpeg"
+        image: "./services/tank.jpeg"
     },
     {
         name: "CCTV Install & Maintenance",
-        image: "./src/assets/services/cctv.jpeg"
+        image: "./services/cctv.jpeg"
     },
     {
         name: "A/C Install & Maintenance",
-        image: "./src/assets/services/ac.jpg"
+        image: "./services/ac.jpg"
     },
     {
         name: "Roofing",
-        image: "./src/assets/services/roofing.jpeg"
+        image: "./services/roofing.jpeg"
     },
     {
         name: "Solar Panel",
-        image: "./src/assets/services/solar.jpg"
+        image: "./services/solar.jpg"
     },
     {
         name: "Carpentery",
-        image: "./src/assets/services/carpenter.jpg"
+        image: "./services/carpenter.jpg"
     }
  
 ]
@@ -45,12 +45,12 @@ const homeRepair = [
 const services = [
     // {
     //     name: "Home Repair",
-    //     image: "./src/assets/services/home.jpg"
+    //     image: "./services/home.jpg"
     // },
  
     {
         name: "Tech Support",
-        image: "./src/assets/services/tech_support.jpg"
+        image: "./services/tech_support.jpg"
     },
     ...homeRepair,
    
@@ -59,7 +59,7 @@ const services = [
 const ServiceList = () => {
   return (
     <>
-      <div className=' grid grid-cols-3 justify-center items-center bg-greyWhite gap-2 gap-y-9 shadow-lg rounded-lg my-16'>
+      <div className=' grid grid-cols-3 justify-center items-center bg-greyWhite gap-2 gap-y-9 shadow-lg rounded-lg my-16 place-items-center w-full'>
 {
     services.map(({name, image})=>
         <div>
