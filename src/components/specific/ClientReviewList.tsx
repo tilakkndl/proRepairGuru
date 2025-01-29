@@ -1,6 +1,6 @@
 import ClientReview from '../shared/ClientReview'
-import { IoIosArrowRoundBack } from "react-icons/io";
-import { IoIosArrowRoundForward } from "react-icons/io";
+// import { IoIosArrowRoundBack } from "react-icons/io";
+// import { IoIosArrowRoundForward } from "react-icons/io";
 
 const ClientReviewList = () => {
     const reviews = [
