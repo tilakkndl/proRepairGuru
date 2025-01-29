@@ -39,9 +39,7 @@ const PlanCard = ({open, onClose, onOpen}: planCardPropType) => {
 {offerInfo.services.map((service)=><div key={service} className=" text-center">{service}</div>)}
 </div>
   <button className=" bg-orange flex flex-row justify-center items-center hover:bg-infobg group rounded-2xl " onClick={()=>{
-    console.log("clicked")
     onOpen()
-    console.log(open)
   }
     }>
 <div className=" uppercase text-xl font-bold text-white  py-2 px-6">Buy now</div>

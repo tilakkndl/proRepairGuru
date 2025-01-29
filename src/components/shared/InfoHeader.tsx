@@ -11,7 +11,7 @@ const InfoHeader = () => {
   const email = import.meta.env.VITE_APP_EMAIL || "prorepairguru@gmail.com"
   return (
 <>
-<div className=' flex flex-row justify-center items-center w-full h-10 text-white overflow-hidden'>
+<div className='hidden md:flex flex-row justify-center items-center w-full h-10 text-white overflow-hidden'>
 
 <div className=' flex flex-row  justify-evenly  items-center bg-infobg  w-2/3 h-full'>
   <div className=' flex flex-row items-center justify-center space-x-1'>

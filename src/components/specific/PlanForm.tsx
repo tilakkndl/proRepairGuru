@@ -18,15 +18,15 @@ const PlanForm = ({onClose, planType}: planformType) => {
     <label className="pl-2">Plan Name.*</label>
     <input name="planType" type="text" value={planType.toUpperCase()} className=" w-full border-2 border-grey px-2 h-10 rounded-lg bg-white" disabled/>
     <label className="pl-2"> Name.*</label>
-    <input type="text" name="name" className=" w-full border-2 border-grey px-2 h-10 rounded-lg"/>
+    <input type="text" name="name" className=" w-full border-2 border-grey px-2 h-10 rounded-lg" required/>
     <label className="pl-2"> Email.*</label>
-    <input type="email" name="email" className=" w-full border-2 border-grey px-2 h-10 rounded-lg"/>
+    <input type="email" name="email" className=" w-full border-2 border-grey px-2 h-10 rounded-lg" required/>
     <label className="pl-2"> Phone.*</label>
-    <input type="text" name="phone" className=" w-full border-2 border-grey px-2 h-10 rounded-lg"/>
+    <input type="text" name="phone" className=" w-full border-2 border-grey px-2 h-10 rounded-lg" required/>
     <label className="pl-2"> Location.*</label>
-    <input type="text" name="location" className=" w-full border-2 border-grey px-2 h-10 rounded-lg"/>
+    <input type="text" name="location" className=" w-full border-2 border-grey px-2 h-10 rounded-lg" required/>
     <label className="pl-2"> Description.*</label>
-    <textarea name="description" cols={3} className=" w-full border-2 border-grey px-2 rounded-lg"/>
+    <textarea name="description" cols={3} className=" w-full border-2 border-grey px-2 rounded-lg" required/>
 
 
 

@@ -10,13 +10,15 @@ const InfoFooter = () => {
   const email = import.meta.env.VITE_APP_EMAIL || "prorepairguru@gmail.com"
   return (
     <>
-<div className=' flex flex-row justify-between items-center w-full  text-white overflow-hidden bg-infoFooterCol p-10 '>
-    <div className=" flex flex-col justify-center items-center ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between items-start w-full text-white overflow-hidden bg-infoFooterCol p-10 mt-5  gap-y-6">
+
+{/* <div className=' flex flex-row justify-between items-start w-full  text-white overflow-hidden bg-infoFooterCol p-10 '> */}
+    <div className=" flex flex-col justify-center items-start ">
     
 
 <div className=' flex flex-col  justify-evenly  items-start rounded-lg  space-y-3 mt-7'>
 
-  <div className=' flex flex-row items-center justify-center space-x-1'>
+  <div className=' flex flex-row items-start justify-start space-x-1'>
    
 <CiLocationOn className=' text-orange text-lg' />
 <p className=''>Tarkeswor-03, Kathamdu</p>
@@ -131,7 +133,7 @@ const InfoFooter = () => {
 
 
 {/* NewsLetter */}
-<div className=" flex flex-col justify-center items-start w-1/5 space-y-3">
+<div className=" flex flex-col justify-center items-start  space-y-3">
 <h3 className=" font-bold text-xl">Newsletter</h3>
 <div className=" flex flex-row justify-start items-center space-x-2">
 <div className=" border-2 border-orange w-5 h-1"></div>

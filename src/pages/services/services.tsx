@@ -7,7 +7,9 @@ const Services = () => {
   return (
 <>
 <RouteTitle/>
+<div className=" flex flex-row justify-center items-center space-x-5">
 <PlanCard  open = {open} onClose = {onClose} onOpen = {onOpen}/>
+</div>
 </>
   )
 }

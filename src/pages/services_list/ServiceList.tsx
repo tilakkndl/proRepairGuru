@@ -59,7 +59,7 @@ const services = [
 const ServiceList = () => {
   return (
     <>
-      <div className=' grid grid-cols-3 justify-center items-center bg-greyWhite gap-2 gap-y-9 shadow-lg rounded-lg my-16 place-items-center w-full'>
+      <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center bg-greyWhite gap-4 md:gap-6 lg:gap-8 shadow-lg rounded-lg my-16 place-items-center w-full px-4 py-6'>
 {
     services.map(({name, image})=>
         <div>

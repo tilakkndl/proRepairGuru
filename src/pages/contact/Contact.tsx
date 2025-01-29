@@ -21,7 +21,7 @@ const Contact = () => {
       <RouteTitle/>
       <div className=' bg-grey-100 w-full'>
 
-      <div className=' grid grid-cols-[1fr_2fr] gap-4 items-center justify-center shadow-lg m-5 rounded-lg'>
+      <div className=' lg:grid lg:grid-cols-[1fr_2fr] grid-cols-2  gap-4 items-center justify-center  rounded-lg'>
         
 <OfficeInfo />
 <JoinTeamForm  {...contactFormInfo}/>

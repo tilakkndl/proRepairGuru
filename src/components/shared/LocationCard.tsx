@@ -8,7 +8,7 @@ interface locatonCardProp {
 const LocationCard = ({location, imageUrl}: locatonCardProp) => {
   return (
     <>
-    <div className=' bg-white pb-5 rounded-md w-72 overflow-hidden'>
+    <div className=' bg-white pb-5 rounded-md w-72 overflow-hidden '>
         <img src={imageUrl} alt="Kathmandu" className=' rounded-md w-full h-56' />
         <h2 className=' ml-3'>{location}</h2>
         <Link to = "/services_list">
