@@ -14,7 +14,7 @@ const OfficeInfo = () => {
           </div>
           <div className=" flex flex-col justify-center items-start">
 <p className=" text-lg font-bold leading-relaxed">Office address</p>
-<p className="">Siddha Pokhari, Bhaktapur</p>
+<p className="">Kuleshwor-14, Kathmandu</p>
           </div>
         </div>
 

@@ -16,7 +16,7 @@ const InfoHeader = () => {
 <div className=' flex flex-row  justify-evenly  items-center bg-infobg  w-2/3 h-full'>
   <div className=' flex flex-row items-center justify-center space-x-1'>
 <CiLocationOn className=' text-orange text-lg' />
-<p className=''>Tarkeswor-03, Kathmandu</p>
+<p className=''>Kuleshwor-14, Kathmandu</p>
   </div>
 <div className=' flex flex-row justify-center items-center space-x-1'>
 <CiPhone className=' text-orange text-lg' />
