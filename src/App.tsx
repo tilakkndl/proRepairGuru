@@ -13,11 +13,18 @@ import JoinUs from "./pages/joinus/JoinUs";
 import ServiceList from "./pages/services_list/ServiceList";
 import ServiceDetails from "./pages/service_details/ServiceDetails";
 import Contact from "./pages/contact/Contact";
+import LaughterTherapy from "./pages/laughtertherapy/LaughterTherapy";
 
 
 function App() {
 
-  const router = createBrowserRouter([{
+  const router = createBrowserRouter([
+    {
+      path: "/laughter_therapy",
+      element: <LaughterTherapy/>
+      
+    },
+    {
     path: "/",
     element: <WrapperComponent/>,
     children: [
