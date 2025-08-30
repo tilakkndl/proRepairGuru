@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiDownload } from "react-icons/fi";
 
 interface FormData {
   name: string;
@@ -15,45 +16,9 @@ const LaughterTherapy: React.FC = () => {
     referenceId: "",
   });
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ): void => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setSuccess(null);
-
-    try {
-      const res = await fetch("/api/laughter-therapy", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        setSuccess(
-          "Your details have been submitted successfully! We'll verify your payment and email your ticket soon."
-        );
-        setFormData({ name: "", email: "", phone: "", referenceId: "" });
-      } else {
-        setError(data.message || "Something went wrong. Try again.");
-      }
-    } catch (err) {
-      setError("Server error. Please try later.");
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (
@@ -72,7 +37,7 @@ const LaughterTherapy: React.FC = () => {
           <ul className="list-disc pl-5 mt-2 text-gray-700">
             <li><strong>Date:</strong> September 6, 2025</li>
             <li><strong>Time:</strong> 4:00 PM – 6:00 PM</li>
-            <li><strong>Venue:</strong> Pokhara Theater,Gairapatan, Pokhara</li>
+            <li><strong>Venue:</strong> Pokhara Theater, Gairapatan, Pokhara</li>
             <li><strong>Price:</strong> Rs. 300</li>
           </ul>
         </div>
@@ -81,12 +46,21 @@ const LaughterTherapy: React.FC = () => {
         <div className="text-center mb-6">
           <p className="mb-2 text-gray-700 font-medium">Scan the QR to Pay via eSewa</p>
           <img
-            src="/esewa_qr.jpg" // <-- Add your QR image here in public/images
+            src="/esewa_qr.jpg"
             alt="eSewa QR"
             className="mx-auto w-48 h-48 rounded-lg shadow-md border"
           />
+           {/* Download Icon */}
+    <a
+      href="/esewa_qr.jpg"
+      download="esewa_qr.jpg"
+      className="absolute -top-3 -right-3 bg-indigo-600 text-white p-2 rounded-full shadow-lg hover:bg-indigo-700 transition duration-200"
+      title="Download QR"
+    >
+        <FiDownload size={20} />
+    </a>
           <p className="text-gray-500 mt-2 text-sm">
-            After payment, enter your Payment ID below.
+            After payment, enter your Reference/Transaction ID below.
           </p>
         </div>
 
@@ -129,29 +103,23 @@ const LaughterTherapy: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-gray-700 mb-1">Reference ID/Transaction ID</label>
+            <label className="block text-gray-700 mb-1">Reference ID / Transaction ID</label>
             <input
               type="text"
               name="referenceId"
               value={formData.referenceId}
               onChange={handleChange}
-              placeholder="Enter your valid Reference ID generated during payment"
+              placeholder="Enter your Reference ID generated during payment"
               required
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
           </div>
 
-          {/* Messages */}
-          {success && <p className="text-green-600 text-center">{success}</p>}
-          {error && <p className="text-red-600 text-center">{error}</p>}
-
-          {/* Submit */}
           <button
             type="submit"
-            disabled={loading}
-            className="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-200 disabled:opacity-50"
+            className="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-200"
           >
-            {loading ? "Submitting..." : "Submit & Book Ticket"}
+            Submit & Book Ticket
           </button>
         </form>
       </div>
